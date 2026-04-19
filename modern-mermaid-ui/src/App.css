@@ -1,0 +1,137 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mm-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mm-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.mm-btn {
+  border-radius: 12px;
+  border: 1px solid rgba(94,96,255,0.45);
+  padding: 0.6em 1em;
+  background: linear-gradient(180deg, rgba(94,96,255,0.18), rgba(94,96,255,0.08));
+  color: inherit;
+}
+
+.mm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.mm-editor,
+.mm-view {
+  border: 1px solid rgba(46,58,103, 0.25);
+  border-radius: 16px;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(12, 18, 43, 0.03), rgba(12, 18, 43, 0.06));
+  box-shadow: 0 6px 24px rgba(12, 18, 43, 0.06), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.mm-textarea {
+  width: 100%;
+  min-height: 240px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.98rem;
+  border: 1px solid rgba(182, 193, 233, 0.55);
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.02);
+  color: inherit;
+}
+
+.mm-hint {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.mm-preview {
+  overflow: auto;
+  border-radius: 12px;
+}
+
+.mm-preview svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Mermaid SVG aesthetics aligned to Broadmix */
+.mm-preview .mermaid .node rect,
+.mm-preview .mermaid .node circle,
+.mm-preview .mermaid .node polygon {
+  filter: drop-shadow(0 1.5px 1.5px rgba(14, 20, 43, 0.18));
+}
+
+.mm-preview .mermaid .node rect {
+  rx: 16px;
+  ry: 16px;
+}
+
+.mm-preview .mermaid .cluster rect {
+  rx: 18px;
+  ry: 18px;
+  stroke-dasharray: 2 3;
+}
+
+.mm-preview .mermaid .edgePath path {
+  stroke-linecap: round;
+  stroke-width: 2.4px;
+}
+
+.mm-preview .mermaid .label,
+.mm-preview .mermaid .edgeLabel {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 980px) {
+  .mm-grid { grid-template-columns: 1fr; }
+}
+
+/* Vite default styles retained for reference */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo { animation: logo-spin infinite 20s linear; }
+}
+
+.card { padding: 2em; }
+
+.read-the-docs { color: #888; }
